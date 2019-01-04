@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lista rzeczy do zrobienia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/fontello/css/face.css" />
+    <link rel="icon" href="assets/img/icon.png">
+    <meta name="author" content="Dominik Puchala">
+</head>
+<body>
+
+    <header>
+        <nav class="main--nav">
+            <ul class="main--nav__list" id="main--nav__list">
+                <li class="main--nav__active" data-li='1'>Lista</li>
+                <li data-li='2'>O autorze</li>
+                <li data-li='3'>Pomoc</li>
+                <!-- Język, może w przyszłości
+                <select class="main--nav__language">
+                    <option>PL</option>
+                    <option>EN</option>
+                </select>
+                -->
+            </ul>
+        </nav>
+        <!-- <nav class="small--nav">
+           <div class="small--nav__menu">
+               <div class="menu--line"></div>
+           </div>
+            <ul class="small--nav__list" id="small--nav__list">
+                    <li class="main--nav__active" data-li='1'>Lista</li>
+                    <li data-li='2'>O autorze</li>
+                    <li data-li='3'>Pomoc</li>
+            </ul>
+        </nav> -->
+    </header>
+    <main>
+        <!-- Lista -->
+        <div class="list--container" id="list--container">
+            <div class="list--title">
+                <h2>Lista rzeczy do zrobienia</h2>
+            </div>
+            <div class="list--menu">
+                <input type="button" id="list--menu__add" value="Dodaj zadanie">
+                <input type="button" id="list--menu__remove" value="Usuń zadanie">
+                <input type="button" id="list--menu__selectAll" value="Zaznacz wszystkie">
+                <input type="text" id="list--menu__text" class="list--menu__text" placeholder="Dodaj zadanie" autofocus> 
+            </div>
+            <ul class="list" id="list">
+            </ul>
+        </div>
+
+        <!-- O autorze -->
+
+        <div class="about--container" id="about--container">
+            <img src="#" alt="author" >
+            <div class="about--container__text">
+                <p>Witam mam na imię Dominik. Jestem studentem Uniwersytetu Rzeszowskiego, studiuje Informatykę i jestem na drugim roku. Moim hobby jest tworzenie stron internetowych oraz szachy. Moja strona portfolio powstaje i w krótce powinna się ukazać. Jeśli chodzi o szachy to trenuje je od mniej więcej roku, a moim największym obecnie osiągnięciem jest 3 miejsce na Akademickich Mistrzostwach Podkarpacia w klasyfikacji drużynowej. W przyszłości chciałbym zostać Front-End Developerem i tworzyć strony dla klientów. Jeśli chciałbyś się ze mną skontaktować to zapraszam na jednego z moich social mediów, linki znajdują się w stopce po prawej stronie.</p>
+            </div>
+        </div>
+
+        <!-- Pomoc -->
+
+        <div class="helpdesk--container" id="helpdesk--container">
+            <h2>Pomoc w korzystaniu ze strony</h2>
+            <p>Poniżej przedstawiam liste zasad, którę mogą pomóc użytkownikowi w korzystaniu ze strony:</p>
+            <dl class="helpdesk--container__list">
+                <dt>1. Ogólne zasady korzystania ze strony</dt>
+                <dd>Strona służy do stworzenia listy zadań, które mamy wykonać. Ułatwia nam to życie ze względu na brak konieczności ciągłego pamiętania swoich codziennych zadań. Użytkownik może wpisać wszystkie swoje zadania, a następnie zaglądać na strone w dowolnym momencie i sprawdzać co jeszcze ma do zrobienia. Zadania  wykonane można przekreślać lub usuwać, aby nie mieszały się z zadaniami aktualnymi. Strona posiada również wiele innych możliwości o których mowa w kolejnych punktach</dd>
+                <dt>2. Dodawanie nowych zadań</dt>
+                <dd>Przycisk 'Dodaj zadanie' służy do dodawania nowych zadań. Wpisz w pole tekstowe pod przyciskiem swoje zadanie, a następnie kliknij omawiany przycisk. Jeżeli pole zostanie puste nie zostanie dodane żadne zadanie.</dd>
+                <dt>3. Usuwanie zadań</dt>
+                <dd>Przycisk 'Usuń zadanie' służy do usuwania wykonanych zadań. Aby to uczynić zaznacz pole obok treści zadania a następnie kliknij omawiany przycisk. Można zaznaczać wiele pól naraz, wszystkie one zostaną usunięte po naciśnięciu przycisku.</dd>
+                <dt>4. Zaznaczanie/odznaczanie wszystkich zadań</dt>
+                <dd>Przycisk 'Zaznacz wszystkie' służy do szybkiego zaznaczenia wszystkich zadań jako wykonane. Jeżeli wszystkie zadania zostaną zaznaczone przycisk zmienia swoją nazwę oraz rolę, jak nazwa wskazuje teraz służy do odznaczenia wszystkich zadań jako niewykonane.</dd>
+                <dt>5. Zaznaczenie naraz części zadań (Shift) </dt>
+                <dd>Jeżeli użytkownik chcę zaznaczyć część listy zadań naraz jako wykonane, należy zaznaczyć jedno zadanie jako wykonane, następnie kliknąć i przytrzymać klawisz 'Shift', a na koniec zaznaczyć drugie zadanie, które będzie końcem zaznaczanych zadań.</dd>
+                <dt>6. Zapisywanie danych</dt>
+                <dd>Strona zapisuje zadania użytkownika w 'localStorage'. Dzięki temu po wyłączeniu strony oraz ponownym jego uruchomieniu dane zostaną wczytane a zadania, które wpisywaliśmy wczytane. Użytkownik poprzez korzystanie ze strony akceptuję zasady korzystania z 'localStorage'</dd>
+                <dt>7. Powrót na górę strony</dt>
+                <dd>Jeżeli użytkownik przewinie strone w dół, w prawym dolnym rogu pojawi się przycisk. Służy on do szybkiego powrotu na górę strony, wystarczy na niego kliknąć.</dd>
+            </dl>
+        </div>
+
+        <!-- Powrót na górę strony - przycisk -->
+        <div class="button--back" id="button--back"><i class="icon-up-circle"></i></div>
+    </main>
+    <footer class="footer">
+        <p> Dominik Puchała &copy; 2018</p>
+        <p>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+        <div class="footer--container__icon">
+                <a href="https://www.facebook.com/profile.php?id=100003088849087" target="_blank"><i class="icon-facebook"></i></a>
+                <a href="https://github.com/DominikPuchala" target="_blank"><i class="icon-github-circled"></i></a>
+                <a href="https://www.linkedin.com/in/dominik-pucha%C5%82a-804153162/" target="_blank"><i class="icon-linkedin"></i></a>
+        </div>
+        
+    </footer>
+
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
