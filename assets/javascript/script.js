@@ -178,14 +178,22 @@ function changeMainContent(e)
 
 function movePageUp()
 {
-    console.log(pageYOffset);
-    if(pageYOffset>300)
-    {
-        window.scrollTo(pageXOffset,0);
-    }
+    let scrollToTop = window.setInterval(function()
+        {
+            let pageHeight = pageYOffset;
+            if(pageHeight > 0)
+            {
+                window.scrollTo(pageXOffset,pageHeight - 20)
+            }
+            else
+            {
+                window.clearInterval(scrollToTop);
+            }
+        }, 10)
+ 
 }
 
-function checkPageYOffset()
+function toggleButton()
 {
     if(pageYOffset>=300)
     {
@@ -197,6 +205,8 @@ function checkPageYOffset()
     }
 }
 
+
+
 uptadeList();
 isAllSelected();
 
@@ -207,4 +217,4 @@ removeItem.addEventListener('click', remove, false);
 selectAllItems.addEventListener('click', selectAll, false);
 navList.addEventListener('click', changeMainContent, false);
 buttonBack.addEventListener('click', movePageUp, false);
-window.addEventListener('scroll', checkPageYOffset, false)
+window.addEventListener('scroll', toggleButton, false)

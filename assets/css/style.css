@@ -181,6 +181,12 @@ a
     color:#1c2410;
 }
 
+.list--container .list--menu input[type="button"]:hover
+{
+    background: #5145f3;
+    color: white;
+}
+
 .list--menu .list--menu__text
 {
     padding:8px 5px;
@@ -353,11 +359,6 @@ a
     .list--container .list--title
     {
         font-size: 1rem;
-    }
-
-    .footer
-    {
-        height: 250px;
     }
 
     .footer .footer--container__icon
